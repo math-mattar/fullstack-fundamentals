@@ -25,7 +25,7 @@ wss.on("connection", function connection(ws) {
 
   wss.broadcast(`Current visitors: ${numClients}`);
 
-  if ((ws.readyState = ws.OPEN)) {
+  if (ws.readyState === ws.OPEN) {
     ws.send("Welcome!");
   }
 
